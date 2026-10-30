@@ -21,10 +21,10 @@ function sidebar() {
     <aside className="sidebar">
       <div className="profile">
         <img
-      src={myPhoto}
-      alt="Foto profil"
-      className="profile-avatar"
-    />
+          src={myPhoto}
+          alt="Foto profil"
+          className="profile-avatar"
+        />
 
         <p className="profile-role">
           Frontend Developer
