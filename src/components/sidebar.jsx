@@ -5,12 +5,16 @@ import {
   FiFolder,
   FiCode,
   FiMail,
+  FiAward,
+  FiBriefcase,
 } from "react-icons/fi";
 import myPhoto from "../assets/My_Photo.jpeg";
 
 const navigation = [
   { label: "Home", href: "#home", icon: FiHome },
   { label: "About", href: "#about", icon: FiUser },
+  { label: "Education", href: "#education", icon: FiAward },
+  { label: "Experience", href: "#experience", icon: FiBriefcase },
   { label: "Projects", href: "#projects", icon: FiFolder },
   { label: "Skills", href: "#skills", icon: FiCode },
   { label: "Contact", href: "#contact", icon: FiMail },
@@ -52,6 +56,13 @@ function sidebar() {
           aria-label="LinkedIn"
         >
           <FaLinkedin size={18} />
+        </a>
+
+        <a
+          href="mailto:iqbalfadhilah684@gmail.com" 
+          aria-label="Email"
+        >
+          <FiMail size={18} />
         </a>
       </div>
 

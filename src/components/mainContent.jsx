@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import {
   FiArrowUpRight,
@@ -7,38 +8,15 @@ import {
   FiBriefcase,
   FiAward,
 } from "react-icons/fi";
-import {
-  FiMonitor,
-  FiServer,
-  FiDatabase,
-  FiTool,
-} from "react-icons/fi";
+
 import { projects } from "../data/projects";
+import { skills} from "../data/skills";
+import { contact } from "../data/contact";
+
 import myPhoto2 from "../assets/my_Photo2.jpeg";
 import universityLogo from "../assets/logo_upi.png";
 
-const skillGroups = [
-  {
-    title: "Front-End",
-    icon: FiMonitor,
-    skills: ["React.js", "JavaScript", "HTML", "CSS", "Responsive Design"],
-  },
-  {
-    title: "Back-End",
-    icon: FiServer,
-    skills: ["Laravel", "Node.js", "Express.js", "RESTful API"],
-  },
-  {
-    title: "Database",
-    icon: FiDatabase,
-    skills: ["MySQL", "MongoDB"],
-  },
-  {
-    title: "Tools & Networking",
-    icon: FiTool,
-    skills: ["Git & GitHub", "Postman", "Cisco Packet Tracer", "Mikrotik"],
-  },
-];
+
 
 function MainContent() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -63,51 +41,59 @@ function MainContent() {
 
   return (
     <main className="main-content">
+      {/* Hero Section */}
       <section id="home" className="content-panel hero-panel">
         <p className="eyebrow">HELLO, I'M</p>
+
         <h1>
           Muhammad Iqbal Fadhilah.
           <br />
           <span>Web Developer.</span>
         </h1>
+
         <p className="hero-description">
-          Informatics student passionate about building
-          responsive, user-friendly web applications.
+          Computer Science graduate with a strong interest in Web Development, focused on building responsive, 
+          user-friendly web applications and delivering practical solutions through technology.
         </p>
+
         <div className="hero-actions">
           <a href="#projects" className="primary-button">
             Explore My Work
             <FiArrowUpRight size={18} />
           </a>
+
           <a href="#contact" className="secondary-button">
-            Contact Me
+            Get in Touch
           </a>
         </div>
       </section>
+
+      {/* About Section */}
       <section id="about" className="content-panel about-panel">
-        {/* Kolom kiri: heading + teks */}
         <div className="about-content">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">TENTANG SAYA</p>
-              <h2>Kenalan Lebih Dekat</h2>
+              <p className="eyebrow">ABOUT ME</p>
+              <h2>Get to Know Me</h2>
             </div>
           </div>
 
           <div className="about-text">
             <p>
-              Saya adalah seorang fresh graduate S1 Ilmu Komputer Universitas Pendidikan Indonesia
-              yang memiliki ketertarikan di bidang Software Engineering, khususnya Web Development.
-              Saya memiliki pemahaman dalam pengembangan aplikasi web end-to-end, perancangan RESTful API, serta
-              pengelolaan basis data. Dalam berbagai proyek akademik maupun mandiri,
-              saya terbiasa menggunakan Laravel, React.js, CSS, Node.js, Express.js, serta basis data MySQL dan MongoDB.
-              Didukung oleh kemampuan analitis, ketelitian, dan pemecahan masalah yang
-              terstruktur, saya siap berkontribusi aktif dan mengasah pengalaman teknis di lingkungan kerja profesional.
+              I am a Computer Science graduate from Universitas Pendidikan
+              Indonesia with a strong interest in Software Engineering,
+              particularly Web Development. I have a foundation in end-to-end
+              web application development, RESTful API design, and database
+              management. Through various academic and personal projects,
+              I have gained experience working with Laravel, React.js, CSS,
+              Node.js, Express.js, MySQL, and MongoDB. With strong analytical
+              thinking, attention to detail, and a structured approach to
+              problem-solving, I am eager to contribute my skills while
+              continuing to grow in a professional environment.
             </p>
           </div>
         </div>
 
-        {/* Kolom kanan: foto full tinggi */}
         <div className="about-image-wrapper">
           <img
             src={myPhoto2}
@@ -116,108 +102,145 @@ function MainContent() {
           />
         </div>
       </section>
+
+      {/* Education Section */}
       <section id="education" className="content-panel">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">PENDIDIKAN</p>
-            <h2>Latar Belakang Akademik</h2>
+            <p className="eyebrow">EDUCATION</p>
+            <h2>Academic Background</h2>
           </div>
         </div>
+
         <div className="education-list">
           <div className="education-card">
             <div className="edu-logo-wrapper">
-              <img 
+              <img
                 src={universityLogo}
-                alt="Logo Universitas" 
-                className="edu-logo" 
+                alt="Universitas Pendidikan Indonesia Logo"
+                className="edu-logo"
               />
             </div>
-            
+
             <div className="edu-info">
-              <span className="edu-date">2022 - 2026</span>
-              <h3>S1 Ilmu Komputer</h3>
-              <h4>Universitas Pendidikan Indonesia  </h4>
-              
+              <span className="edu-date">2022 – 2026</span>
+              <h3>Bachelor of Computer Science</h3>
+              <h4>Universitas Pendidikan Indonesia</h4>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Experience Section */}
       <section id="experience" className="content-panel">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">PENGALAMAN</p>
-            <h2>Pengalaman & Pelatihan</h2>
+            <p className="eyebrow">EXPERIENCE</p>
+            <h2>Experience & Training</h2>
           </div>
         </div>
+
         <div className="experience-list">
           <div className="experience-card">
             <div className="exp-icon">
-              <FiBriefcase size={20} /> 
+              <FiBriefcase size={20} />
             </div>
+
             <div className="exp-info">
-              <span className="exp-date">Sept 2024 - Januari 2025</span>
-              <h3>Asisten Praktikum - Jaringan Komputer</h3>
+              <span className="exp-date">
+                September 2024 – January 2025
+              </span>
+
+              <h3>Teaching Assistant – Computer Networks</h3>
               <h4>Universitas Pendidikan Indonesia</h4>
+
               <p>
-                Memfasilitasi sesi praktikum mingguan mata kuliah Sistem Operasi dan Jaringan Komputer. 
-                Bertanggung jawab membimbing mahasiswa dalam simulasi pengalamatan IP, subnetting, dan topologi jaringan 
-                menggunakan Cisco Packet Tracer, mendampingi praktik konfigurasi Mikrotik, serta 
-                membantu troubleshooting kendala teknis dan mengevaluasi tugas praktikum
+                Assisted weekly laboratory sessions for Operating Systems
+                and Computer Networks courses. Guided students through
+                IP addressing, subnetting, and network topology simulations
+                using Cisco Packet Tracer, supported MikroTik configuration
+                exercises, helped troubleshoot technical issues, and
+                evaluated laboratory assignments.
               </p>
             </div>
           </div>
+
           <div className="experience-card">
             <div className="exp-icon">
-              <FiAward size={20} /> 
+              <FiAward size={20} />
             </div>
+
             <div className="exp-info">
-              <span className="exp-date">Feb 2025 - Juli 2025</span>
-              <h3>Coding Camp powered by DBS Foundation - Front-End and Back-End Developer</h3>
-              <h4>Dicoding x DBS Foundation</h4>
+              <span className="exp-date">
+                February 2025 – July 2025
+              </span>
+
+              <h3>
+                Front-End & Back-End Developer Trainee
+              </h3>
+
+              <h4>Coding Camp powered by DBS Foundation – Dicoding</h4>
+
               <p>
-                Program pelatihan IT intensif yang diselenggarakan atas kolaborasi DBS Foundation dan Dicoding Indonesia untuk menyiapkan peserta masuk 
-                ke dunia kerja profesional. Melalui pelatihan ini, saya mempelajari pengembangan web secara end-to-end untuk 
-                spesialisasi Front-End dan Back-End, mulai dari perancangan antarmuka, pembuatan logika server, 
-                integrasi RESTful API, hingga pengelolaan basis data. Selain keterampilan teknis, program ini 
-                juga memperkuat soft skills, kemampuan bahasa Inggris profesional, dan literasi keuangan.
+                Participated in an intensive technology training program
+                organized through a collaboration between DBS Foundation
+                and Dicoding Indonesia. The program provided learning
+                experiences in end-to-end web development, covering
+                user interface development, server-side logic, RESTful API
+                integration, and database management. It also strengthened
+                my soft skills, professional English communication, and
+                financial literacy.
               </p>
-              <a href="https://drive.google.com/file/d/1h7ZjKqY6ExBzIjWHG4FsrozURSzyx_zc/view?usp=sharing" target="_blank" className="text-link" style={{marginTop: '10px'}}>
-                Lihat Sertifikat <FiArrowUpRight />
+
+              <a
+                href="https://drive.google.com/file/d/1h7ZjKqY6ExBzIjWHG4FsrozURSzyx_zc/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+                className="text-link"
+                style={{ marginTop: "10px" }}
+              >
+                View Certificate <FiArrowUpRight />
               </a>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Skills Section */}
       <section id="skills" className="content-panel">
-  <div className="section-heading">
-    <div>
-      <p className="eyebrow">KEAHLIAN</p>
-      <h2>Skills & Teknologi</h2>
-    </div>
-  </div>
-
-  <div className="skills-grid">
-    {skillGroups.map((group) => {
-      const Icon = group.icon;
-      return (
-        <div className="skill-card" key={group.title}>
-          <div className="skill-card-header">
-            <div className="exp-icon">
-              <Icon size={20} />
-            </div>
-            <h3>{group.title}</h3>
-          </div>
-
-          <div className="skill-tags">
-            {group.skills.map((skill) => (
-              <span key={skill}>{skill}</span>
-            ))}
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">SKILLS</p>
+            <h2>Tech Stack & Skills</h2>
           </div>
         </div>
-      );
-    })}
-  </div>
-</section>
+
+        <div className="skills-grid">
+          {skills.map((group) => {
+            const Icon = group.icon;
+
+            return (
+              <div className="skill-card" key={group.title}>
+                <div className="skill-card-header">
+                  <div className="exp-icon">
+                    <Icon size={20} />
+                  </div>
+
+                  <h3>{group.title}</h3>
+                </div>
+
+                <div className="skill-tags">
+                  {group.skills.map((skill) => (
+                    <span key={skill}>{skill}</span>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Projects Section */}
       <section id="projects" className="content-panel">
         <div className="section-heading">
           <div>
@@ -225,6 +248,7 @@ function MainContent() {
             <h2>Featured Projects</h2>
           </div>
         </div>
+
         <div className="project-grid">
           {projects.map((project) => (
             <button
@@ -232,15 +256,16 @@ function MainContent() {
               key={project.id}
               className="project-card"
               onClick={() => setSelectedProject(project)}
-              aria-label={`Lihat detail proyek ${project.name}`}
+              aria-label={`View details for ${project.name}`}
             >
-             <div className="project-thumbnail-wrapper">
+              <div className="project-thumbnail-wrapper">
                 <img
                   src={project.thumbnail}
-                  alt={`Preview ${project.name}`}
+                  alt={`${project.name} preview`}
                   className="project-thumbnail"
                 />
               </div>
+
               <div className="project-info">
                 <p className="project-category">
                   {project.category}
@@ -259,7 +284,7 @@ function MainContent() {
                 </div>
 
                 <span className="project-link">
-                  View project details
+                  View Project Details
                   <FiArrowUpRight size={16} />
                 </span>
               </div>
@@ -267,6 +292,66 @@ function MainContent() {
           ))}
         </div>
       </section>
+      <section id="contact" className="content-panel contact-panel">
+        <div className="contact-intro">
+          <p className="eyebrow">GET IN TOUCH</p>
+          <h2>Let's Collaborate</h2>
+          <p className="contact-description">
+            I'm currently open to internship opportunities, job opportunities,
+            and collaborative projects in web development. Feel free to reach out.
+            I'd be happy to hear from you!
+          </p>
+          <a
+            href="mailto:iqbalfadhilah684@gmail.com"
+            className="contact-button"
+          >
+            Send Me an Email
+            <FiArrowUpRight size={18} />
+          </a>
+        </div>
+
+        <div className="contact-list">
+          {contact.map((item) => {
+            const Icon = item.icon;
+            const content = (
+              <>
+                <div className="contact-icon">
+                  <Icon size={20} />
+                </div>
+                <div className="contact-info">
+                  <span className="contact-label">{item.label}</span>
+                  <span className="contact-value">{item.value}</span>
+                </div>
+                {item.href && (
+                  <FiArrowUpRight size={18} className="contact-arrow" />
+                )}
+              </>
+            );
+
+            return item.href ? (
+              <a
+                key={item.label}
+                href={item.href}
+                target={item.href.startsWith("http") ? "_blank" : undefined}
+                rel="noreferrer"
+                className="contact-item"
+              >
+                {content}
+              </a>
+            ) : (
+              <div key={item.label} className="contact-item contact-item-static">
+                {content}
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <footer className="site-footer">
+        <p>© {new Date().getFullYear()} Muhammad Iqbal Fadhilah. All rights reserved.</p>
+        <p>Built with React & crafted with care.</p>
+      </footer>
+      {/* Project Detail Modal */}
       {selectedProject && (
         <div
           className="modal-overlay"
@@ -289,17 +374,19 @@ function MainContent() {
                 type="button"
                 className="modal-close"
                 onClick={() => setSelectedProject(null)}
-                aria-label="Tutup detail proyek"
+                aria-label="Close project details"
                 autoFocus
               >
                 <FiX size={21} />
               </button>
             </div>
+
             <img
-              src={selectedProject.detail} // <--- Menjadi ini
-              alt={`Preview ${selectedProject.name}`}
-              className="modal-thumbnail" // <--- Gunakan class khusus untuk modal
+              src={selectedProject.detail}
+              alt={`${selectedProject.name} project screenshot`}
+              className="modal-thumbnail"
             />
+
             <p className="project-category modal-category">
               {selectedProject.category}
             </p>
@@ -317,22 +404,22 @@ function MainContent() {
             </p>
 
             <div className="modal-section">
-              <h3>Latar Belakang</h3>
+              <h3>Background</h3>
               <p>{selectedProject.problem}</p>
             </div>
 
             <div className="modal-section">
-              <h3>Solusi</h3>
+              <h3>Solution</h3>
               <p>{selectedProject.solution}</p>
             </div>
 
             <div className="modal-section">
-              <h3>Kontribusi Saya</h3>
+              <h3>My Contribution</h3>
               <p>{selectedProject.contribution}</p>
             </div>
 
             <div className="modal-section">
-              <h3>Technologies</h3>
+              <h3>Technologies Used</h3>
 
               <div className="project-tags modal-tags">
                 {selectedProject.technologies.map((tech) => (
