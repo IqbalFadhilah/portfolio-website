@@ -13,10 +13,8 @@ import { projects } from "../data/projects";
 import { skills} from "../data/skills";
 import { contact } from "../data/contact";
 
-import myPhoto2 from "../assets/my_Photo2.jpeg";
+import myPhoto2 from "../assets/my_photo2.jpeg";
 import universityLogo from "../assets/logo_upi.png";
-
-
 
 function MainContent() {
   const [selectedProject, setSelectedProject] = useState(null);
