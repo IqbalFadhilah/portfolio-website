@@ -2,7 +2,7 @@
 import petaaksiThumbnail from "../assets/projects/petaAksi_mockup2.jpeg";
 import skywatchThumbnail from "../assets/projects/skywatch_mockup.jpeg";
 
-import petaaksiDetail from "../assets/projects/petaAksi_detail.png";
+import petaaksiDetail from "../assets/projects/petaaksi_detail.png";
 import skywatchDetail from "../assets/projects/Skywatch_predict.png";
 
 export const projects = [
